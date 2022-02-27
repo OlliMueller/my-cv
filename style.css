@@ -151,3 +151,13 @@ a[href*="top"]:active {
   background-color: cornflowerblue;
   color: white;
 }
+
+.experience-job {
+  display: inline-block;
+  _border: 1px solid red;
+}
+
+.experience-period {
+  display: inline-block;
+  _border: 1px solid green;
+}
