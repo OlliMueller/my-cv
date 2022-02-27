@@ -161,3 +161,8 @@ a[href*="top"]:active {
   display: inline-block;
   _border: 1px solid green;
 }
+
+.poem-vertical {
+  writing-mode: vertical-rl;
+  margin: 0 auto;
+}
