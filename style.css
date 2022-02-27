@@ -1,11 +1,13 @@
 /**************************************************************/
-/* General Styling */
+/* General Styling: Überall gültig*/
 * {
   box-sizing: border-box;
-  _font-family: "Nobile", sans-serif;
-  font-family: "Libre Franklin", sans-serif;
-  /* line-height, um Zeilenabstand zu vergrößern */
+}
+
+html {
+  font-family: "Libre Franklin", "Nobile", sans-serif;
   line-height: 150%;
+  color: MidnightBlue;
 }
 
 h1,
@@ -14,15 +16,24 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rokkitt", serif;
+  font-family: "Rokkitt", "Rosarivo", serif;
 }
 
 body {
   margin: 0px;
 }
 
+::selection {
+  _background-color: lightblue;
+  background-color: #ffb7c5; /*sakura-color*/
+  color: white;
+}
+
 /**************************************************************/
 /* Specific Stylings */
+
+/**************************************************************/
+/* Heading and Navbar */
 
 .site-header {
   padding: 40px 16px;
@@ -31,15 +42,21 @@ body {
   text-align: center;
 }
 
-/*navbar */
+.subheading::before {
+  content: "🚀";
+}
+
+.subheading::after {
+  content: "👨‍💻";
+}
 
 .navbar {
   padding: 10px;
-  color: black;
+  color: inherit;
 }
 
 .navbar + .navbar {
-  margin-left: 16px;
+  margin-left: 14px;
 }
 
 .navbar:hover {
@@ -52,6 +69,9 @@ body {
   color: white;
 }
 
+/**************************************************************/
+/* Main and Footer */
+
 .main,
 .site-footer {
   padding: 16px 8px;
@@ -62,16 +82,44 @@ body {
   zentrieren mit margin: 0 auto; */
 }
 
+blockquote {
+  color: #ffb7c5;
+  text-align: center;
+}
+
+main h2::first-letter {
+  font-size: 150%;
+}
+
 .main > * {
-  _background-color: cyan;
-  border-top: 2px solid lightgrey;
-  /* nochmal üben, sehr geile lösung */
+  _background-color: cyan; /* Verdeutlichung des Rahmens */
+  border-top: 2px solid lightgrey; /* nochmal üben, sehr geile lösung */
 }
 
 .main > *:first-child {
-  border-top: none;
-  /* um, obersten Strich zu entfernen */
+  border-top: none; /* um, obersten Strich zu entfernen */
 }
+
+article + article {
+  margin-top: 40px;
+  _margin-left: 150px;
+}
+
+/*main > * + * same like article + article */
+.main > * + * {
+  _margin-top: 40px;
+}
+
+.list {
+  list-style-type: square;
+} /* list-style-type für andere Auflistungszeichen */
+
+.site-footer {
+  text-align: right; /*rechtsbündiges Copyright */
+}
+
+/**************************************************************/
+/* Hover und Active Pseudo-Classes*/
 
 a[href^="mailto"]:hover {
   background-color: lightskyblue;
@@ -84,7 +132,7 @@ a[href^="https://www.linkedin"]:hover
   color: darkslategrey;
 }
 
-a[href^="#"]:hover {
+a[href*="#top"]:hover {
   background-color: lightskyblue;
   color: darkslategrey;
 }
@@ -99,44 +147,7 @@ a[href*="www.linkedin.com"]:active {
   color: white;
 }
 
-a[href*="#"]:active {
+a[href*="top"]:active {
   background-color: cornflowerblue;
   color: white;
-}
-
-/* list-style-type für andere Auflistungszeichen */
-.list {
-  list-style-type: square;
-}
-
-.site-footer {
-  text-align: right;
-}
-
-::selection {
-  background-color: lightblue;
-  _background-color: hotpink;
-  color: white;
-}
-
-.subheading::before {
-  content: "🚀";
-}
-
-.subheading::after {
-  content: "👨‍💻";
-}
-
-main h2::first-letter {
-  font-size: 150%;
-}
-
-article + article {
-  margin-top: 40px;
-  _margin-left: 150px;
-}
-
-/*main > * + * same like article + article */
-.main > * + * {
-  _margin-top: 40px;
 }
