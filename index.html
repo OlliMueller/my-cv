@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="”author”" content="”Oliver" Müller” />
     <title>CV of Oliver Müller</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,14 +15,17 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="site-header">
       <h1>Oliver Müller</h1>
-      <p>Future developer with great passion to develop potentials</p>
+      <p class="subheading">
+        Future developer with great passion to develop potentials
+      </p>
+
       <nav>
-        <a href="#about">About Me</a>
-        <a href="#experiences">Experiences</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a class="navbar" href="#about">About Me</a>
+        <a class="navbar" href="#experiences">Experiences</a>
+        <a class="navbar" href="#skills">Skills</a>
+        <a class="navbar" href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -69,15 +73,15 @@
         <section>
           <h3>Soft Skills</h3>
           <ul>
-            <li>Perseverance</li>
-            <li>clear and appreciative feedback culture</li>
-            <li>Humor</li>
+            <li class="list">Perseverance</li>
+            <li class="list">Hospitality</li>
+            <li class="list">Humour</li>
           </ul>
           <h3>Technical Skills</h3>
           <ul>
-            <li>Languages: English, Japanese</li>
-            <li>Life and Leadership Coaching</li>
-            <li>WebDev: Basics</li>
+            <li class="list">Languages: English, Japanese</li>
+            <li class="list">Life and Leadership Coaching</li>
+            <li class="list">WebDev: Basics</li>
           </ul>
         </section>
       </article>
@@ -99,5 +103,8 @@
         </ol>
       </article>
     </main>
+    <footer class="site-footer">
+      <p>&copy; Oliver Müller 2022<br /><a href="#">Nach oben👆</a></p>
+    </footer>
   </body>
 </html>

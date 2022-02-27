@@ -1,14 +1,11 @@
-/* So schreibt man Kommentare */
-
+/**************************************************************/
 /* General Styling */
 * {
   box-sizing: border-box;
   _font-family: "Nobile", sans-serif;
   font-family: "Libre Franklin", sans-serif;
-}
-
-body {
-  margin: 0px;
+  /* line-height, um Zeilenabstand zu vergrößern */
+  line-height: 150%;
 }
 
 h1,
@@ -20,20 +17,126 @@ h6 {
   font-family: "Rokkitt", serif;
 }
 
-/* Specific Styling */
+body {
+  margin: 0px;
+}
 
-.header {
+/**************************************************************/
+/* Specific Stylings */
+
+.site-header {
   padding: 40px 16px;
-  _background-color: lightblue;
-  background-color: goldenrod;
+  background-color: lightblue;
   _background-color: seagreen;
   text-align: center;
 }
 
-.main {
+/*navbar */
+
+.navbar {
+  padding: 10px;
+  color: black;
+}
+
+.navbar + .navbar {
+  margin-left: 16px;
+}
+
+.navbar:hover {
+  background-color: lightskyblue;
+  color: darkslategrey;
+}
+
+.navbar:active {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.main,
+.site-footer {
   padding: 16px 8px;
   max-width: 800px;
   margin: 0 auto;
+  _background-color: antiquewhite;
   /* max-width: maximale Breite festlegen,
   zentrieren mit margin: 0 auto; */
+}
+
+.main > * {
+  _background-color: cyan;
+  border-top: 2px solid lightgrey;
+  /* nochmal üben, sehr geile lösung */
+}
+
+.main > *:first-child {
+  border-top: none;
+  /* um, obersten Strich zu entfernen */
+}
+
+a[href^="mailto"]:hover {
+  background-color: lightskyblue;
+  color: darkslategrey;
+}
+
+a[href^="https://www.linkedin"]:hover
+{
+  background-color: lightskyblue;
+  color: darkslategrey;
+}
+
+a[href^="#"]:hover {
+  background-color: lightskyblue;
+  color: darkslategrey;
+}
+
+a[href^="mailto"]:active {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+a[href*="www.linkedin.com"]:active {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+a[href*="#"]:active {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+/* list-style-type für andere Auflistungszeichen */
+.list {
+  list-style-type: square;
+}
+
+.site-footer {
+  text-align: right;
+}
+
+::selection {
+  background-color: lightblue;
+  _background-color: hotpink;
+  color: white;
+}
+
+.subheading::before {
+  content: "🚀";
+}
+
+.subheading::after {
+  content: "👨‍💻";
+}
+
+main h2::first-letter {
+  font-size: 150%;
+}
+
+article + article {
+  margin-top: 40px;
+  _margin-left: 150px;
+}
+
+/*main > * + * same like article + article */
+.main > * + * {
+  _margin-top: 40px;
 }
