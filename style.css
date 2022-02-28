@@ -5,8 +5,9 @@
 }
 
 html {
+  font-size: 16px;
   font-family: "Libre Franklin", "Nobile", sans-serif;
-  line-height: 150%;
+  line-height: 1.6rem;
   color: MidnightBlue;
 }
 
@@ -20,7 +21,7 @@ h6 {
 }
 
 body {
-  margin: 0px;
+  margin: 0;
 }
 
 ::selection {
@@ -32,14 +33,10 @@ body {
 /**************************************************************/
 /* Specific Stylings */
 
-/**************************************************************/
-/* Heading and Navbar */
-
 .site-header {
-  padding: 40px 16px;
-  padding-top: 60px;
+  padding: 3rem 1rem;
+  padding-top: 4rem;
   background-color: lightblue;
-  _background-color: seagreen;
   text-align: center;
   position: relative;
 }
@@ -48,27 +45,39 @@ body {
   background-color: #ffb7c5;
   position: absolute;
   padding: 0;
-  right: 20px;
-  top: 20px;
-  border-radius: 8px;
-  padding: 5px;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
-.subheading::before {
+.combined-heading {
+  font-size: 4rem;
+}
+
+.title-heading {
+  font-size: 1em;
+}
+
+.profession-heading {
+  font-size: 0.25em;
+}
+
+.profession-heading::before {
   content: "🚀";
 }
 
-.subheading::after {
+.profession-heading::after {
   content: "👨‍💻";
 }
 
 .navbar {
-  padding: 10px;
+  padding: 0.5rem 1rem;
   color: inherit;
 }
 
 .navbar + .navbar {
-  margin-left: 14px;
+  margin-left: 1rem;
 }
 
 .navbar:hover {
@@ -81,27 +90,25 @@ body {
   color: white;
 }
 
-/**************************************************************/
-/* Main and Footer */
-
 .main,
 .site-footer {
-  padding: 16px 8px;
-  max-width: 800px;
+  padding: 1rem;
+  max-width: 65ch;
   margin: 0 auto;
   _background-color: antiquewhite;
-  /* max-width: maximale Breite festlegen,
-  zentrieren mit margin: 0 auto; */
+  /* zentrieren mit margin: 0 auto; */
 }
 
 main article {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  _background-color: coral;
 }
 
 .headings-article {
   position: relative;
-  left: -12px;
+  left: -1rem;
+  _background-color: rosybrown;
   /* neu */
 }
 
@@ -111,27 +118,26 @@ blockquote {
 }
 
 main h2::first-letter {
-  font-size: 150%;
+  font-size: 2.5rem;
 }
 
 .main > * {
   _background-color: cyan; /* Verdeutlichung des Rahmens */
-  border-top: 2px solid lightgrey; /* nochmal üben, sehr geile lösung */
-  _padding: 16px; /* Alternative zu main article {} */
+  border-top: 0.15rem solid lightgrey;
+  _padding: 1.6rem; /* Alternative zu main article {} */
 }
 
 .main > *:first-child {
-  border-top: none; /* um, obersten Strich zu entfernen */
+  border-top: none; /* um, Divider zu entfernen */
 }
 
 article + article {
-  margin-top: 40px;
-  _margin-left: 150px;
+  margin-top: 2.5rem;
 }
 
 /*main > * + * same like article + article */
 .main > * + * {
-  _margin-top: 40px;
+  _margin-top: 4rem;
 }
 
 .list {
@@ -178,12 +184,12 @@ a[href*="top"]:active {
 
 .experience-job {
   display: inline-block;
-  _border: 1px solid red;
+  _border: 0.15rem solid red;
 }
 
 .experience-period {
   display: inline-block;
-  _border: 1px solid green;
+  _border: 0.15rem solid green;
 }
 
 /* Japanischer Abschnitt */
