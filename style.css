@@ -37,9 +37,21 @@ body {
 
 .site-header {
   padding: 40px 16px;
+  padding-top: 60px;
   background-color: lightblue;
   _background-color: seagreen;
   text-align: center;
+  position: relative;
+}
+
+.hire-me-button {
+  background-color: #ffb7c5;
+  position: absolute;
+  padding: 0;
+  right: 20px;
+  top: 20px;
+  border-radius: 8px;
+  padding: 5px;
 }
 
 .subheading::before {
@@ -82,6 +94,17 @@ body {
   zentrieren mit margin: 0 auto; */
 }
 
+main article {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.headings-article {
+  position: relative;
+  left: -12px;
+  /* neu */
+}
+
 blockquote {
   color: #ffb7c5;
   text-align: center;
@@ -94,6 +117,7 @@ main h2::first-letter {
 .main > * {
   _background-color: cyan; /* Verdeutlichung des Rahmens */
   border-top: 2px solid lightgrey; /* nochmal üben, sehr geile lösung */
+  _padding: 16px; /* Alternative zu main article {} */
 }
 
 .main > *:first-child {
@@ -161,6 +185,8 @@ a[href*="top"]:active {
   display: inline-block;
   _border: 1px solid green;
 }
+
+/* Japanischer Abschnitt */
 
 .poem-vertical {
   writing-mode: vertical-rl;
