@@ -11,6 +11,30 @@ html {
   color: MidnightBlue;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 24px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -51,24 +75,20 @@ body {
   padding: 0.5rem;
 }
 
-.combined-heading {
-  font-size: 4rem;
+@media screen and (min-width: 992px) {
+  .hire-me-button {
+    position: fixed;
+  }
 }
 
-.title-heading {
-  font-size: 1em;
-}
+@media print {
+  .hire-me-button {
+    display: none;
+  }
 
-.profession-heading {
-  font-size: 0.25em;
-}
-
-.profession-heading::before {
-  content: "🚀";
-}
-
-.profession-heading::after {
-  content: "👨‍💻";
+  .navbar {
+    display: none;
+  }
 }
 
 .navbar {
@@ -88,6 +108,26 @@ body {
 .navbar:active {
   background-color: cornflowerblue;
   color: white;
+}
+
+.combined-heading {
+  font-size: 4rem;
+}
+
+.title-heading {
+  font-size: 1em;
+}
+
+.profession-heading {
+  font-size: 0.25em;
+}
+
+.profession-heading::before {
+  content: "🚀";
+}
+
+.profession-heading::after {
+  content: "👨‍💻";
 }
 
 .main,
@@ -135,9 +175,21 @@ article + article {
   margin-top: 2.5rem;
 }
 
-/*main > * + * same like article + article */
+@media screen and (min-width: 768px) {
+  article + article {
+    margin-top: 3.5rem;
+  }
+}
+
+/* .main > * + * same like article + article */
 .main > * + * {
-  _margin-top: 4rem;
+  _margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    _margin-top: 3.5rem;
+  }
 }
 
 .list {
