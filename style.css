@@ -1,5 +1,5 @@
 /**************************************************************/
-/* General Styling: Überall gültig*/
+/* General Styling */
 * {
   box-sizing: border-box;
 }
@@ -94,6 +94,21 @@ body {
 .navbar {
   padding: 0.5rem 1rem;
   color: inherit;
+  _background-color: palegreen;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  _background-color: yellow;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .navbar + .navbar {
@@ -133,7 +148,7 @@ body {
 .main,
 .site-footer {
   padding: 1rem;
-  max-width: 65ch;
+  max-width: 60ch;
   margin: 0 auto;
   _background-color: antiquewhite;
   /* zentrieren mit margin: 0 auto; */
@@ -150,6 +165,30 @@ main article {
   left: -1rem;
   _background-color: rosybrown;
   /* neu */
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-job {
+  _display: inline-block;
+  _border: 0.15rem solid red;
+}
+
+.experience-period {
+  _display: inline-block;
+  _border: 0.15rem solid green;
+}
+
+@media screen and (min-width: 768px) {
+  .experience-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
 blockquote {
@@ -234,19 +273,25 @@ a[href*="top"]:active {
   color: white;
 }
 
-.experience-job {
-  display: inline-block;
-  _border: 0.15rem solid red;
-}
-
-.experience-period {
-  display: inline-block;
-  _border: 0.15rem solid green;
-}
-
 /* Japanischer Abschnitt */
 
 .poem-vertical {
   writing-mode: vertical-rl;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .poem-vertical {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .poem-vertical > * + * {
+    margin-top: 3rem;
+  }
 }
