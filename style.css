@@ -60,6 +60,8 @@ body {
   color: var(--active-color);
 }
 
+/**********************************/
+
 /**************************************************************/
 /* Specific Stylings */
 
@@ -68,6 +70,7 @@ body {
   padding-top: 4rem;
   text-align: center;
   position: relative;
+  color: var(--main-color);
   background-image: linear-gradient(
     30deg,
     var(--background-color) 60%,
@@ -83,7 +86,7 @@ body {
 }
 
 .footer {
-  background-color: var(--background-color);
+  _background-color: var(--background-color);
   background-image: linear-gradient(
     0deg,
     var(--background-color),
@@ -325,5 +328,22 @@ a[href*="top"]:active {
 @media screen and (max-width: 768px) {
   .poem-vertical > * + * {
     margin-top: 3rem;
+  }
+}
+
+/**************************************************************/
+/* Dark Mode */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--active-color);
+    background: var(--main-color);
+  }
+  .footer,
+  .header {
+    color: var(--main-color);
+  }
+  .link-contact {
+    color: var(--accent-color);
   }
 }
