@@ -8,7 +8,6 @@ html {
   font-size: 16px;
   font-family: "Libre Franklin", "Nobile", sans-serif;
   line-height: 1.6rem;
-  color: MidnightBlue;
 }
 
 @media screen and (min-width: 768px) {
@@ -45,13 +44,20 @@ h6 {
 }
 
 body {
+  --main-color: MidnightBlue;
+  --background-color: lightblue;
+  --secondary-background-color: azure;
+  --hover-background-color: lightskyblue;
+  --hover-color: azure; /* darkslategrey */
+  --active-background-color: cornflowerblue;
+  --active-color: snow;
+  --accent-color: #ffb7c5;
   margin: 0;
 }
 
 ::selection {
-  background-color: lightblue;
-  _background-color: #ffb7c5; /*sakura-color*/
-  color: white;
+  background-color: var(--background-color);
+  color: var(--active-color);
 }
 
 /**************************************************************/
@@ -62,28 +68,34 @@ body {
   padding-top: 4rem;
   text-align: center;
   position: relative;
-  _background-image: linear-gradient(135deg, lightblue 0%, azure);
-  background-image: linear-gradient(30deg, lightblue 60%, azure);
+  background-image: linear-gradient(
+    30deg,
+    var(--background-color) 60%,
+    var(--secondary-background-color)
+  );
 }
 
 .main {
   padding: 1rem;
   max-width: 60ch;
   margin: 0 auto;
-  _background-color: antiquewhite;
   /* zentrieren mit margin: 0 auto; */
 }
 
 .footer {
-  background-color: lightblue;
-  background-image: linear-gradient(0deg, lightblue, azure);
+  background-color: var(--background-color);
+  background-image: linear-gradient(
+    0deg,
+    var(--background-color),
+    var(--secondary-background-color)
+  );
   margin-top: 2rem; /* Abstand zu Contact-section vergrößern */
   padding-top: 3rem;
   padding-bottom: 1rem;
 }
 
 .hire-me-button {
-  background-color: #ffb7c5;
+  background-color: var(--accent-color);
   position: absolute;
   padding: 0;
   right: 1rem;
@@ -111,15 +123,13 @@ body {
 .navbar {
   text-decoration: none; /* 4 Links in der Navbar standardmäßig nicht unterstrichen */
   padding: 0.5rem 1rem;
-  color: inherit;
-  _background-color: palegreen;
+  color: var(--main-color);
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
-  _background-color: yellow;
 }
 
 @media screen and (min-width: 768px) {
@@ -135,14 +145,14 @@ body {
 
 .navbar:hover {
   text-decoration: underline;
-  background-color: lightskyblue;
-  color: azure;
+  background-color: var(--hover-background-color);
+  color: var(--hover-color);
 }
 
 .navbar:active {
-  _background-color: #ffb7c5;
-  background-color: midnightblue;
-  color: white;
+  background-color: var(--main-color);
+  _background-color: var(--active-background-color); /* test */
+  color: var(--active-color);
 }
 
 .combined-heading {
@@ -168,14 +178,11 @@ body {
 main article {
   padding-left: 1rem;
   padding-right: 1rem;
-  _background-color: coral;
 }
 
 .headings-article {
   position: relative;
   left: -1rem;
-  _background-color: rosybrown;
-  /* neu */
 }
 
 .experience-header {
@@ -203,7 +210,7 @@ main article {
 }
 
 blockquote {
-  color: #ffb7c5;
+  color: var(--accent-color);
   text-align: center;
 }
 
@@ -212,8 +219,7 @@ main h2::first-letter {
 }
 
 .main > * {
-  _background-color: cyan; /* Verdeutlichung des Rahmens */
-  border-top: 0.15rem solid lightblue;
+  border-top: 0.15rem solid var(--background-color);
   _padding: 1.6rem; /* Alternative zu main article {} */
 }
 
@@ -248,7 +254,7 @@ article + article {
 
 .link-contact,
 .link-footer {
-  color: inherit;
+  color: var(--main-color);
 } /* alle hyperlinks nicht mehr in blue, sondern in der Farbe des Eltern-El */
 
 .text-footer {
@@ -264,34 +270,34 @@ article + article {
 /* Hover und Active Pseudo-Classes*/
 
 a[href^="mailto"]:hover {
-  background-color: lightskyblue;
-  color: darkslategrey;
+  background-color: var(--hover-background-color);
+  color: var(--hover-color);
 }
 
 a[href^="https://www.linkedin"]:hover
 {
-  background-color: lightskyblue;
-  color: darkslategrey;
+  background-color: var(--hover-background-color);
+  color: var(--hover-color);
 }
 
 a[href*="#top"]:hover {
-  background-color: lightskyblue;
-  color: darkslategrey;
+  background-color: var(--hover-background-color);
+  color: var(--hover-color);
 }
 
 a[href^="mailto"]:active {
-  background-color: cornflowerblue;
-  color: white;
+  background-color: var(--active-background-color);
+  color: var(--active-color);
 }
 
 a[href*="www.linkedin.com"]:active {
-  background-color: cornflowerblue;
-  color: white;
+  background-color: var(--active-background-color);
+  color: var(--active-color);
 }
 
 a[href*="top"]:active {
-  background-color: cornflowerblue;
-  color: white;
+  background-color: var(--active-background-color);
+  color: var(--active-color);
 }
 
 /**************************************************************/
