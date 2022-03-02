@@ -49,20 +49,37 @@ body {
 }
 
 ::selection {
-  _background-color: lightblue;
-  background-color: #ffb7c5; /*sakura-color*/
+  background-color: lightblue;
+  _background-color: #ffb7c5; /*sakura-color*/
   color: white;
 }
 
 /**************************************************************/
 /* Specific Stylings */
 
-.site-header {
+.header {
   padding: 3rem 1rem;
   padding-top: 4rem;
-  background-color: lightblue;
   text-align: center;
   position: relative;
+  _background-image: linear-gradient(135deg, lightblue 0%, azure);
+  background-image: linear-gradient(30deg, lightblue 60%, azure);
+}
+
+.main {
+  padding: 1rem;
+  max-width: 60ch;
+  margin: 0 auto;
+  _background-color: antiquewhite;
+  /* zentrieren mit margin: 0 auto; */
+}
+
+.footer {
+  background-color: lightblue;
+  background-image: linear-gradient(0deg, lightblue, azure);
+  margin-top: 2rem; /* Abstand zu Contact-section vergrößern */
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 .hire-me-button {
@@ -92,6 +109,7 @@ body {
 }
 
 .navbar {
+  text-decoration: none; /* 4 Links in der Navbar standardmäßig nicht unterstrichen */
   padding: 0.5rem 1rem;
   color: inherit;
   _background-color: palegreen;
@@ -116,12 +134,14 @@ body {
 }
 
 .navbar:hover {
+  text-decoration: underline;
   background-color: lightskyblue;
-  color: darkslategrey;
+  color: azure;
 }
 
 .navbar:active {
-  background-color: cornflowerblue;
+  _background-color: #ffb7c5;
+  background-color: midnightblue;
   color: white;
 }
 
@@ -143,15 +163,6 @@ body {
 
 .profession-heading::after {
   content: "👨‍💻";
-}
-
-.main,
-.site-footer {
-  padding: 1rem;
-  max-width: 60ch;
-  margin: 0 auto;
-  _background-color: antiquewhite;
-  /* zentrieren mit margin: 0 auto; */
 }
 
 main article {
@@ -202,7 +213,7 @@ main h2::first-letter {
 
 .main > * {
   _background-color: cyan; /* Verdeutlichung des Rahmens */
-  border-top: 0.15rem solid lightgrey;
+  border-top: 0.15rem solid lightblue;
   _padding: 1.6rem; /* Alternative zu main article {} */
 }
 
@@ -235,8 +246,18 @@ article + article {
   list-style-type: square;
 } /* list-style-type für andere Auflistungszeichen */
 
-.site-footer {
-  text-align: right; /*rechtsbündiges Copyright */
+.link-contact,
+.link-footer {
+  color: inherit;
+} /* alle hyperlinks nicht mehr in blue, sondern in der Farbe des Eltern-El */
+
+.text-footer {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.copyright-footer {
+  text-align: center;
 }
 
 /**************************************************************/
@@ -273,6 +294,7 @@ a[href*="top"]:active {
   color: white;
 }
 
+/**************************************************************/
 /* Japanischer Abschnitt */
 
 .poem-vertical {
@@ -280,7 +302,11 @@ a[href*="top"]:active {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-content: space-between;
+}
+
+.poem-vertical > p {
+  margin-right: 3rem;
 }
 
 @media screen and (max-width: 768px) {
