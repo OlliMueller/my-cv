@@ -45,6 +45,7 @@ h6 {
 
 body {
   --main-color: MidnightBlue;
+  --secondary-color: dodgerblue;
   --background-color: lightblue;
   --secondary-background-color: azure;
   --hover-background-color: lightskyblue;
@@ -127,6 +128,8 @@ body {
   text-decoration: none; /* 4 Links in der Navbar standardmäßig nicht unterstrichen */
   padding: 0.5rem 1rem;
   color: var(--main-color);
+  transition: background-color 0.3s ease-in-out;
+  _transition: color 0.5s ease-in-out;
 }
 
 .navigation {
@@ -149,13 +152,19 @@ body {
 .navbar:hover {
   text-decoration: underline;
   background-color: var(--hover-background-color);
-  color: var(--hover-color);
+  _color: var(--hover-color);
 }
 
 .navbar:active {
   background-color: var(--main-color);
   _background-color: var(--active-background-color); /* test */
   color: var(--active-color);
+}
+
+.navbar:focus {
+  background-color: var(--accent-color);
+  outline: 0.3rem double var(--main-color);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .combined-heading {
@@ -259,6 +268,15 @@ article + article {
 .link-footer {
   color: var(--main-color);
 } /* alle hyperlinks nicht mehr in blue, sondern in der Farbe des Eltern-El */
+
+.link-contact:focus,
+.link-footer:focus,
+.nach-oben:focus {
+  background-color: var(--accent-color);
+  outline: 0.3rem double var(--main-color);
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+}
 
 .text-footer {
   text-align: center;
