@@ -86,26 +86,27 @@ body {
   /* zentrieren mit margin: 0 auto; */
 }
 
-.footer {
-  _background-color: var(--background-color);
-  background-image: linear-gradient(
-    0deg,
-    var(--background-color),
-    var(--secondary-background-color)
-  );
-  margin-top: 2rem; /* Abstand zu Contact-section vergrößern */
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-}
-
 .hire-me-button {
-  background-color: var(--accent-color);
   position: absolute;
-  padding: 0;
   right: 1rem;
   top: 1rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
+  opacity: 0.7;
+  background-color: var(--accent-color);
+  transform-origin: 100% 0%;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.header:hover .hire-me-button,
+.header:focus-within .hire-me-button {
+  opacity: 1;
+  font-weight: 1000;
+  transform: scale(1.3);
+}
+
+.hire-me-button:hover::after {
+  content: "🙋‍♂️";
 }
 
 @media screen and (min-width: 992px) {
@@ -276,6 +277,18 @@ article + article {
   outline: 0.3rem double var(--main-color);
   transition: background-color 0.3s ease-in-out;
   text-decoration: none;
+}
+
+.footer {
+  _background-color: var(--background-color);
+  background-image: linear-gradient(
+    0deg,
+    var(--background-color),
+    var(--secondary-background-color)
+  );
+  margin-top: 2rem; /* Abstand zu Contact-section vergrößern */
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 .text-footer {
