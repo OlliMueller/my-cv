@@ -47,12 +47,10 @@ h6 {
 
 body {
   --main-color: MidnightBlue;
-  --secondary-color: dodgerblue;
   --background-color: lightblue;
   --secondary-background-color: azure;
   --hover-background-color: lightskyblue;
   --hover-color: azure;
-  --active-background-color: cornflowerblue;
   --active-color: snow;
   --accent-color: #ffb7c5;
 
@@ -166,18 +164,15 @@ body {
   padding: 0.5rem 1rem;
   color: var(--main-color);
   transition: background-color 0.3s ease-in-out;
-  _transition: color 0.5s ease-in-out;
 }
 
 .nav-link:hover {
   text-decoration: underline;
   background-color: var(--hover-background-color);
-  _color: var(--hover-color);
 }
 
 .nav-link:active {
   background-color: var(--main-color);
-  _background-color: var(--active-background-color); /* test */
   color: var(--active-color);
 }
 
@@ -216,18 +211,37 @@ main article {
   _padding-right: 1.5rem;
 } /*    Alternative zu .main > * + *    */
 
-.main > * {
+.article-grid {
+  /* NEU!!! VORHER:  .main < * { */
   border-top: 0.15rem solid var(--background-color);
   _padding: 1.5rem; /* Alternative zu main article {} */
 }
 
 .main > *:first-child {
-  border-top: none; /* um, Divider zu entfernen */
+  _border-top: none; /* um, Divider zu entfernen */
 }
 
-.article-heading {
+@media screen and (min-width: 768px) {
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 80ch;
+  }
+}
+
+.main-article-heading {
+  /* NEU: VORHER article-heading */
   position: relative;
   left: -1rem;
+}
+
+.main-article-content {
+  margin-top: 4rem;
 }
 
 blockquote {
@@ -293,6 +307,12 @@ blockquote {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .footer-text span {
+    display: block;
+  }
+}
+
 /**************************************************************/
 /* Hover und Active Pseudo-Classes*/
 
@@ -313,17 +333,17 @@ a[href*="#top"]:hover {
 }
 
 a[href^="mailto"]:active {
-  background-color: var(--active-background-color);
+  background-color: var(--main-color);
   color: var(--active-color);
 }
 
 a[href*="www.linkedin.com"]:active {
-  background-color: var(--active-background-color);
+  background-color: var(--main-color);
   color: var(--active-color);
 }
 
 a[href*="top"]:active {
-  background-color: var(--active-background-color);
+  background-color: var(--main-color);
   color: var(--active-color);
 }
 
