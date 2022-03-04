@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Oliver" Müller” />
+    <title>CV of Oliver Müller</title>
+    <meta name="author" content="Oliver Müller” />
     <meta
       name="description"
       content="My first self-built website with my CV."
     />
-    <title>CV of Oliver Müller</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/normalize.css@latest/normalize.css"
@@ -23,30 +23,33 @@
     />
   </head>
   <body>
+    <!--************************************ HEADER ************************************-->
     <header class="header">
-      <div class="combined-heading">
-        <h1 class="title-heading">Oliver Müller</h1>
-        <p class="profession-heading">
-          Future developer with great passion to develop potentials
+      <div class="heading-group">
+        <h1 class="main-heading">Oliver Müller</h1>
+        <h2 class="name-in-japanese">オリバー・ミュラー</h2>
+        <p class="profession">
+          Developer with great passion to develop potentials
         </p>
       </div>
       <nav class="navigation">
-        <a class="navbar" href="#about">About Me</a>
-        <a class="navbar" href="#experiences">Experiences</a>
-        <a class="navbar" href="#skills">Skills</a>
-        <a class="navbar" href="#contact">Contact</a>
-        <aside class="hire-me-button">Hire Me</aside>
+        <a class="nav-link" href="#profile">About Me</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <aside class="hire-me">Hire Me</aside>
       </nav>
     </header>
-
+    <!--************************************ MAIN - START ************************************-->
     <main class="main">
+      <!--************************************ BLOCKQUOTE ************************************-->
       <blockquote>
         “Have no single point of failure. Have no single path to success.“
         <br />
-        - James Clear & Oriba!
+        - James Clear
       </blockquote>
-      <article id="about">
-        <h2 class="headings-article">About Me</h2>
+      <article id="profile">
+        <h2 class="article-heading">About Me</h2>
         <p>
           I am passionate about enabling people to reach their full potential
           through IT solutions so that they can have a positive impact on their
@@ -55,12 +58,13 @@
           is right.
         </p>
       </article>
-      <article id="experiences">
-        <h2 class="headings-article">Experiences</h2>
+      <!--************************************ Article: EXPERIENCE ************************************-->
+      <article id="experience">
+        <h2 class="article-heading">Experience</h2>
         <section>
           <header class="experience-header">
-            <h3 class="experience-job">Student at Coding Bootcamp EU</h3>
-            <p class="experience-period">from 2022</p>
+            <h3 class="experience-heading">Student at Coding Bootcamp EU</h3>
+            <p class="experience-subheading">from 2022</p>
           </header>
           <p>
             I am on the fast track to becoming a web developer - motivated,
@@ -71,8 +75,10 @@
         </section>
         <section>
           <header class="experience-header">
-            <h3 class="experience-job">Community Pastor at ICF Munich e.V.</h3>
-            <p class="experience-period">2015-2021</p>
+            <h3 class="experience-heading">
+              Community Pastor at ICF Munich e.V.
+            </h3>
+            <p class="experience-subheading">2015-2021</p>
           </header>
           <p>
             As a community pastor, it was my responsibility and passion to show
@@ -83,25 +89,27 @@
           </p>
         </section>
       </article>
-      <article>
-        <h2 class="headings-article" id="skills">Skills</h2>
+      <!--************************************ Article: SKILLS ************************************-->
+      <article id="skills">
+        <h2 class="article-heading">Skills</h2>
         <section>
           <h3>Soft Skills</h3>
-          <ul>
-            <li class="list">Perseverance</li>
-            <li class="list">Hospitality</li>
-            <li class="list">Humour</li>
+          <ul class="list-style">
+            <li>Perseverance</li>
+            <li>Hospitality</li>
+            <li>Humour</li>
           </ul>
           <h3>Technical Skills</h3>
-          <ul>
-            <li class="list">Languages: English, Japanese</li>
-            <li class="list">Life and Leadership Coaching</li>
-            <li class="list">WebDev: Basics of HTML and CSS</li>
+          <ul class="list-style">
+            <li>Languages: English, Japanese</li>
+            <li>Life and Leadership Coaching</li>
+            <li>WebDev: Basics of HTML and CSS</li>
           </ul>
         </section>
       </article>
-      <article>
-        <h2 class="headings-article" id="Japanese">Japanese Poems</h2>
+      <!--************************************ Article: JAPANESE POEMS ************************************-->
+      <article id="japanese">
+        <h2 class="article-heading">Japanese Poems</h2>
         <div class="poem-vertical">
           <p class="poem-listing">
             「月の輝くは<br />晴れたる雪の如し<br />梅花は<br />照れる星に似たり」<br />菅原道真
@@ -114,19 +122,20 @@
           </p>
         </div>
       </article>
-      <article>
-        <h2 class="headings-article" id="contact">Contact</h2>
+      <!--************************************ Article: CONTACT ************************************-->
+      <article id="contact">
+        <h2 class="article-heading">Contact</h2>
         <ol>
           <li>
             E-Mail:
-            <a class="link-contact" href="mailto:mueller_oliver@outlook.de"
+            <a class="contact-link" href="mailto:mueller_oliver@outlook.de"
               >mueller_oliver@outlook.de</a
             >
           </li>
           <li>
             LinkedIn:
             <a
-              class="link-contact"
+              class="contact-link"
               href="https://www.linkedin.com/in/oliver-müller-2ba064156/"
               >Oliver Müller</a
             >
@@ -134,14 +143,15 @@
         </ol>
       </article>
     </main>
+    <!--************************************ FOOTER ************************************-->
     <footer class="footer">
-      <p class="text-footer">
+      <p class="footer-text">
         Would I be a good fit for your company? Then you are welcome to
-        <a class="link-footer" href="mailto:mueller_oliver@outlook.de"
+        <a class="footer-link" href="mailto:mueller_oliver@outlook.de"
           >contact me</a
         >
       </p>
-      <p class="copyright-footer">
+      <p class="footer-copyright">
         &copy; Oliver Müller 2022<br /><a class="nach-oben" href="#top"
           >Nach oben👆</a
         >
